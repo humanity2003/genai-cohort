@@ -22,7 +22,7 @@ client.chat.completions.create({
         {role: 'user', content: 'Hello, how are you?'}
     ]
 }).then(response => {
-    console.log(response);
+    console.log(response.choices[0].message.content);
 }).catch(err => {
     console.error(err);
 })
